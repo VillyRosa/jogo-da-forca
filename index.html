@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <div class="links">
+            <p class="title">Jogo da Forca</p>
+            <p class="modo-nav" onclick="menuOpen()">Menu</p>
+        </div>
+    </nav>
+
+    <div class="container-menu">
+        <div class="menu">
+            <h1>Jogo da Forca</h1>
+            <div class="selecionar">
+                <img class="setas" src="images/seta-esquerda.png" onclick="temaAnterior()">
+                <p id="tema">Tema</p>
+                <img class="setas" src="images/seta-direita.png" onclick="temaPosterior()">
+            </div>
+            <div class="selecionar">
+                <img class="setas" src="images/seta-esquerda.png" onclick="modoAnterior()">
+                <p id="modo">Modo de Jogo</p>
+                <img class="setas" src="images/seta-direita.png" onclick="modoPosterior()">
+            </div>
+            <div class="btn-comecar" onclick="jogar()">
+                <p>Jogar</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-jogo hidden">
+        <div class="container2">
+            <div class="slots">
+            </div>
+            <div class="forca">
+                <div class="tronco-cima"></div>
+                <div class="tronco-meio"></div>
+                <div class="tronco-baixo"></div>
+                <div class="corda"></div>
+                <div class="cabeca hidden"></div>
+                <div class="corpo hidden"></div>
+                <div class="braco-direito hidden"></div>
+                <div class="braco-esquerdo hidden"></div>
+                <div class="perna-direita hidden"></div>
+                <div class="perna-esquerda hidden"></div>
+            </div>
+        </div>
+        <div class="teclado">
+            <div class="letras q" onclick="verifica('q')">Q</div>
+            <div class="letras w" onclick="verifica('w')">W</div>
+            <div class="letras e" onclick="verifica('e')">E</div>
+            <div class="letras r" onclick="verifica('r')">R</div>
+            <div class="letras t" onclick="verifica('t')">T</div>
+            <div class="letras y" onclick="verifica('y')">Y</div>
+            <div class="letras u" onclick="verifica('u')">U</div>
+            <div class="letras i" onclick="verifica('i')">I</div>
+            <div class="letras o" onclick="verifica('o')">O</div>
+            <div class="letras p" onclick="verifica('p')">P</div>
+            <div class="break"></div>   
+            <div class="letras a" onclick="verifica('a')">A</div>
+            <div class="letras s" onclick="verifica('s')">S</div>
+            <div class="letras d" onclick="verifica('d')">D</div>
+            <div class="letras f" onclick="verifica('f')">F</div>
+            <div class="letras g" onclick="verifica('g')">G</div>
+            <div class="letras h" onclick="verifica('h')">H</div>
+            <div class="letras j" onclick="verifica('j')">J</div>
+            <div class="letras k" onclick="verifica('k')">K</div>
+            <div class="letras l" onclick="verifica('l')">L</div>
+            <div class="break"></div>  
+            <div class="letras z" onclick="verifica('z')">Z</div>
+            <div class="letras x" onclick="verifica('x')">X</div>
+            <div class="letras c" onclick="verifica('c')">C</div>
+            <div class="letras v" onclick="verifica('v')">V</div>
+            <div class="letras b" onclick="verifica('b')">B</div>
+            <div class="letras n" onclick="verifica('n')">N</div>
+            <div class="letras m" onclick="verifica('m')">M</div>
+
+        </div>
+    </div>
+    
+    <script src="js/menu.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
