@@ -1,0 +1,25 @@
+main .jogo .palavra {
+    /* background-color: green; */
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+main .jogo .palavra .letra {
+    width: 80px;
+    height: 60px;
+    /* background-color: pink; */
+    margin: 0 10px 25px 10px;
+    border-radius: 8px;
+    border-bottom: 8px solid #151718;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    font-weight: 50%;
+    text-shadow: 0 0 10px white;
+}

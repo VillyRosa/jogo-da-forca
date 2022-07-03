@@ -4,88 +4,88 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo da Velha</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title>Jogo da Forca</title>
+    <link rel="stylesheet" href="css/main.css"> <!-- CSS PRINCIPAL -->
+    <link rel="stylesheet" href="css/alert-box.css"> <!-- CSS CAIXA DE ALERTA -->
+    <link rel="stylesheet" href="css/teclado.css"> <!-- CSS TECLADO -->
+    <link rel="stylesheet" href="css/forca.css"> <!-- CSS FORCA -->
+    <link rel="stylesheet" href="css/palavra.css"> <!-- CSS PALAVRA -->
 </head>
 <body>
 
+    <!-- Cabeçalho do site -->
     <nav>
-        <div class="links">
-            <p class="title">Jogo da Forca</p>
-            <p class="modo-nav" onclick="menuOpen()">Menu</p>
+        <p>Jogo da Forca</p>
+        <div class="modos">
+            <p onclick="montarJogo('animais')">Animais</p>
+            <p onclick="montarJogo('frutas')">Frutas</p>
+            <p onclick="montarJogo('objetos')">Objetos</p>
+            <p onclick="montarJogo('aleatorio')">Aleatório</p>
         </div>
     </nav>
 
-    <div class="container-menu">
-        <div class="menu">
-            <h1>Jogo da Forca</h1>
-            <div class="selecionar">
-                <img class="setas" src="images/seta-esquerda.png" onclick="temaAnterior()">
-                <p id="tema">Tema</p>
-                <img class="setas" src="images/seta-direita.png" onclick="temaPosterior()">
-            </div>
-            <div class="selecionar">
-                <img class="setas" src="images/seta-esquerda.png" onclick="modoAnterior()">
-                <p id="modo">Modo de Jogo</p>
-                <img class="setas" src="images/seta-direita.png" onclick="modoPosterior()">
-            </div>
-            <div class="btn-comecar" onclick="jogar()">
-                <p>Jogar</p>
+    <!-- Corpo do site -->
+    <main>
+        <div class="caixa-de-alerta oculto">
+            <span id="txt-span">Texto de alerta</span>
+            <div class="btns oculto">
+                <button onclick="confirmar()">Sim</button>
+                <button onclick="negar()">Não</button>
             </div>
         </div>
-    </div>
-
-    <div class="container-jogo hidden">
-        <div class="container2">
-            <div class="slots">
-            </div>
+        <div class="jogo">
             <div class="forca">
-                <div class="tronco-cima"></div>
-                <div class="tronco-meio"></div>
-                <div class="tronco-baixo"></div>
-                <div class="corda"></div>
-                <div class="cabeca hidden"></div>
-                <div class="corpo hidden"></div>
-                <div class="braco-direito hidden"></div>
-                <div class="braco-esquerdo hidden"></div>
-                <div class="perna-direita hidden"></div>
-                <div class="perna-esquerda hidden"></div>
+                <div class="cima"></div>
+                <div class="meio"></div>
+                <div class="baixo"></div>   
+                <div class="cabeca oculto"></div>
+                <div class="tronco oculto"></div>
+                <div class="corda oculto"></div>
+                <div class="braco-esquerdo oculto"></div>
+                <div class="braco-direito oculto"></div>
+                <div class="perna-esquerda oculto"></div>
+                <div class="perna-direita oculto"></div>
+            </div>
+            <div class="palavra">
+                <!-- <div class="letra">A</div> -->
             </div>
         </div>
         <div class="teclado">
-            <div class="letras q" onclick="verifica('q')">Q</div>
-            <div class="letras w" onclick="verifica('w')">W</div>
-            <div class="letras e" onclick="verifica('e')">E</div>
-            <div class="letras r" onclick="verifica('r')">R</div>
-            <div class="letras t" onclick="verifica('t')">T</div>
-            <div class="letras y" onclick="verifica('y')">Y</div>
-            <div class="letras u" onclick="verifica('u')">U</div>
-            <div class="letras i" onclick="verifica('i')">I</div>
-            <div class="letras o" onclick="verifica('o')">O</div>
-            <div class="letras p" onclick="verifica('p')">P</div>
-            <div class="break"></div>   
-            <div class="letras a" onclick="verifica('a')">A</div>
-            <div class="letras s" onclick="verifica('s')">S</div>
-            <div class="letras d" onclick="verifica('d')">D</div>
-            <div class="letras f" onclick="verifica('f')">F</div>
-            <div class="letras g" onclick="verifica('g')">G</div>
-            <div class="letras h" onclick="verifica('h')">H</div>
-            <div class="letras j" onclick="verifica('j')">J</div>
-            <div class="letras k" onclick="verifica('k')">K</div>
-            <div class="letras l" onclick="verifica('l')">L</div>
-            <div class="break"></div>  
-            <div class="letras z" onclick="verifica('z')">Z</div>
-            <div class="letras x" onclick="verifica('x')">X</div>
-            <div class="letras c" onclick="verifica('c')">C</div>
-            <div class="letras v" onclick="verifica('v')">V</div>
-            <div class="letras b" onclick="verifica('b')">B</div>
-            <div class="letras n" onclick="verifica('n')">N</div>
-            <div class="letras m" onclick="verifica('m')">M</div>
-
+            <div id="Q" class="teclas" onclick="verificar('Q')">Q</div>
+            <div id="W" class="teclas" onclick="verificar('W')">W</div>
+            <div id="E" class="teclas" onclick="verificar('E')">E</div>
+            <div id="R" class="teclas" onclick="verificar('R')">R</div>
+            <div id="T" class="teclas" onclick="verificar('T')">T</div>
+            <div id="Y" class="teclas" onclick="verificar('Y')">Y</div>    
+            <div id="U" class="teclas" onclick="verificar('U')">U</div>
+            <div id="I" class="teclas" onclick="verificar('I')">I</div>
+            <div id="O" class="teclas" onclick="verificar('O')">O</div>
+            <div id="P" class="teclas" onclick="verificar('P')">P</div>
+            <div class="break"></div>
+            <div id="A" class="teclas" onclick="verificar('A')">A</div>
+            <div id="S" class="teclas" onclick="verificar('S')">S</div>
+            <div id="D" class="teclas" onclick="verificar('D')">D</div>
+            <div id="F" class="teclas" onclick="verificar('F')">F</div>
+            <div id="G" class="teclas" onclick="verificar('G')">G</div>
+            <div id="H" class="teclas" onclick="verificar('H')">H</div>
+            <div id="J" class="teclas" onclick="verificar('J')">J</div>
+            <div id="K" class="teclas" onclick="verificar('K')">K</div>
+            <div id="L" class="teclas" onclick="verificar('L')">L</div>
+            <div class="break"></div>
+            <div id="Z" class="teclas" onclick="verificar('Z')">Z</div>
+            <div id="X" class="teclas" onclick="verificar('X')">X</div>
+            <div id="C" class="teclas" onclick="verificar('C')">C</div>
+            <div id="V" class="teclas" onclick="verificar('V')">V</div>
+            <div id="B" class="teclas" onclick="verificar('B')">B</div>
+            <div id="N" class="teclas" onclick="verificar('N')">N</div>
+            <div id="M" class="teclas" onclick="verificar('M')">M</div>
         </div>
-    </div>
+    </main>
     
-    <script src="js/menu.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/palavras.js"></script>
+    <script src="js/aleatorizar.js"></script>
+    <script src="js/verificar.js"></script>
+    <script src="js/alerta.js"></script>
 </body>
 </html>
