@@ -1,0 +1,14 @@
+@media (max-width: 414px) {
+    nav {
+        padding: 10px;
+    }
+
+    nav p {
+        font-size: 13px;
+    }
+
+    nav .modos p {
+        margin: 3px 13px 0 13px;
+        font-size: 10px;
+    }
+}

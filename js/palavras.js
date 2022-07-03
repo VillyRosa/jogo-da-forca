@@ -1,3 +1,6 @@
-var animais = ['CACHORRO', 'GATO', 'FOCA', 'GALINHA', 'PINGUIM'];
-var frutas = ['MELANCIA', 'PERA', 'UVA', 'AMORA', 'BANANA'];
-var objetos = ['BICICLETA', 'CADEIRA', 'POLTRONA', 'MESA'];
+var animais = ['CACHORRO', 'GATO', 'FOCA', 'GALINHA', 'PINGUIM', 'BODE', 'OVELHA', 'ZEBRA', 'CROCODILO',
+ 'MACACO', 'PORCO', 'RATO', 'ESQUILO', 'GUAXINIM', 'URSO', 'RINOCERONTE', 'BALEIA'];
+var frutas = ['MELANCIA', 'PERA', 'UVA', 'AMORA', 'BANANA', 'ABACATE', 'MORANGO', 'MANGA', 'ACEROLA',
+ 'KIWI', 'AMEIXA', 'TANGERINA'];
+var objetos = ['BICICLETA', 'CADEIRA', 'POLTRONA', 'MESA', 'GARRAFA', 'CAMA', 'LIVRO', 'CADERNO', 'CANETA',
+ 'BACIA'];
