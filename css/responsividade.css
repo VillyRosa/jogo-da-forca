@@ -1,4 +1,6 @@
 @media (max-width: 414px) {
+
+    /* Menu nav */
     nav {
         padding: 10px;
     }
@@ -10,5 +12,119 @@
     nav .modos p {
         margin: 3px 13px 0 13px;
         font-size: 10px;
+    }
+
+    /* conteiner alerta */
+    .caixa-de-alerta {
+        width: 250px;
+        height: 125px;
+    }
+
+    .caixa-de-alerta span {
+        width: 90%;
+        font-size: 15px;
+    }
+
+    .caixa-de-alerta .btns button {
+        width: 75px;
+        height: 25px;
+        font-size: 15px;
+    }
+
+    /* container jogo */
+    main .jogo {
+        flex-direction: column;
+    }
+
+    /* Forca */
+    main .jogo .forca {
+        height: 300px;
+    }
+
+    main .jogo .forca .cima {
+        width: 100px;
+        height: 20px;
+        margin: 0 0 -1px 77px;
+    }
+
+    main .jogo .forca .meio {
+        width: 22.5px;
+        height: 100px;
+    }
+
+    main .jogo .forca .baixo {
+        width: 75px;
+        height: 20px;
+    }
+
+    main .jogo .forca .corda {
+        width: 2.5px;
+        height: 10px;
+        margin: 0 0 90px 140px;
+    }
+
+    main .jogo .forca .cabeca {
+        width: 32.5px;
+        height: 35px;
+        border: 2px solid white;
+        margin: 0 0 45px 140px;
+    }
+
+    main .jogo .forca .tronco {
+        width: 2.5px;
+        height: 35px;
+        margin: 24px 0 0 140px;
+    }
+
+    main .jogo .forca .braco-direito {
+        width: 2px;
+        height: 25px;
+        margin: 12.5px 0 0 125px;
+    }
+
+    main .jogo .forca .braco-esquerdo {
+        width: 2px;
+        height: 25px;
+        margin: 12.5px 0 0 153px;
+    }
+
+    main .jogo .forca .perna-direita {
+        width: 2px;
+        height: 30px;
+        margin: 80px 0 0 125px;
+    }
+
+    main .jogo .forca .perna-esquerda {
+        width: 2px;
+        height: 30px;
+        margin: 80px 0 0 153px;
+    }
+
+    /* Palavra */
+    main .jogo .palavra {
+        height: 100px;
+        /* background-color: pink; */
+    }
+    
+    main .jogo .palavra .letra {
+        width: 40px;
+        height: 30px;
+        border-radius: 4px;
+        border-bottom: 6px solid #151718;
+        font-size: 25px;
+        margin: 0 5px 10px 5px;
+    }
+
+    /* Teclado */
+    main .teclado .teclas {
+        width: 28px;
+        height: 28px;
+        font-size: 15px;
+    }
+
+    main .teclado .desativo {
+        width: 28px;
+        height: 28px;
+        font-size: 15px;
     }
 }
